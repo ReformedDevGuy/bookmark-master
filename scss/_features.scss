@@ -1,0 +1,136 @@
+.features-section {
+  text-align: center;
+  margin: 0 auto 40px auto;
+  width: 300px;
+  @include breakpoint(medium) {
+    width: 533px;
+  }
+  @include breakpoint(large) {
+    margin-bottom: 80px;
+  }
+  &__header {
+    margin-bottom: 22px;
+    @include breakpoint(large) {
+      margin-bottom: 37px;
+    }
+  }
+}
+
+.tab-nav {
+  margin: 0 auto 62px auto;
+  @include breakpoint(large) {
+    width: 730px;
+    display: flex;
+    margin-bottom: 73px;
+  }
+  &__item {
+    flex: 1;
+    border-bottom: solid 1px $primary-neutral-color;
+    text-align: center;
+  }
+  &__link {
+    color: $secondary-neutral-color;
+    display: inline-block;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border-bottom: solid 3px transparent;
+    &:hover {
+      color: $secondary-color;
+    }
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+}
+
+.tab-nav__link--active {
+  border-bottom-color: $secondary-color;
+}
+
+.tab__item {
+  @include breakpoint(large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 128px;
+    grid-template-areas:
+      "tab-img tab-header"
+      "tab-img tab-description"
+      "tab-img tab-btn";
+  }
+}
+
+.tab__image {
+  margin-bottom: 72px;
+  img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+  @include breakpoint(large) {
+    margin-bottom: initial;
+    grid-area: tab-img;
+  }
+}
+.tab__header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  @include breakpoint(large) {
+    font-size: 1.95rem;
+    margin-bottom: initial;
+    text-align: initial;
+    grid-area: tab-header;
+    align-self: end;
+  }
+}
+.tab__description {
+  text-align: center;
+  @include breakpoint(large) {
+    text-align: initial;
+    grid-area: tab-description;
+    align-self: center;
+  }
+}
+.tab__btn {
+  grid-area: tab-btn;
+  align-self: center;
+  justify-self: start;
+  &--hide {
+    display: none;
+    @include breakpoint(large) {
+      display: block;
+    }
+  }
+}
+
+.tabs {
+  position: relative;
+  margin-bottom: 140px;
+  &::after {
+    content: "";
+    background-color: $primary-color;
+    border-bottom-right-radius: 50%;
+    height: 52%;
+    width: 68%;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: -1;
+    @include breakpoint(medium) {
+      top: 60px;
+      height: 65%;
+      width: 58%;
+    }
+    @include breakpoint(large) {
+      width: 34%;
+      height: 350px;
+    }
+  }
+  @include breakpoint(large) {
+    margin-bottom: 250px;
+  }
+}
+
+.tab__item--hide {
+  display: none;
+}

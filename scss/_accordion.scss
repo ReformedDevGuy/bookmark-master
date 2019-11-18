@@ -1,0 +1,63 @@
+.questions-section {
+  width: 300px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  @include breakpoint(medium) {
+    width: 496px;
+  }
+  &__header {
+    margin-bottom: 30px;
+  }
+}
+
+.accordion {
+  width: 300px;
+  margin: 0 auto 105px auto;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(medium) {
+    width: 544px;
+    margin-bottom: 150px;
+  }
+  &__item {
+    border-bottom: solid 1px #ccc;
+  }
+  &__header {
+    font-size: 14x;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 24px 22px 0;
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+    @include breakpoint(medium) {
+      font-size: 18px;
+    }
+  }
+  &__body {
+    padding-top: 26px;
+    padding-bottom: 38px;
+  }
+  &__btn {
+    margin-top: 40px;
+    align-self: center;
+    @include breakpoint(medium) {
+      margin-top: 54px;
+    }
+  }
+}
+
+.accordion__header--active {
+  svg {
+    transform: rotate(180deg);
+    path {
+      stroke: $secondary-color;
+    }
+  }
+}
+
+.accordion__body--hide {
+  display: none;
+}

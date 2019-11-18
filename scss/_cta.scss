@@ -1,0 +1,92 @@
+.cta {
+  font-size: 18px;
+  background-color: $primary-color;
+  padding-top: 65px;
+  padding-bottom: 53px;
+  text-align: center;
+  &__wrapper {
+    width: 300px;
+    margin: auto;
+    @include breakpoint(medium) {
+      width: 440px;
+    }
+  }
+  &__sub-header {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.4em;
+    margin-bottom: 1em;
+    font-size: 0.6em;
+    @include breakpoint(medium) {
+      font-size: 0.8em;
+      margin-bottom: 1.9em;
+    }
+  }
+  &__header {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 1.5em;
+    @include breakpoint(medium) {
+      font-size: 1.7em;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+  &__input-wrapper {
+    margin-bottom: 1em;
+    flex: 1;
+    @include breakpoint(large) {
+      margin-bottom: initial;
+      margin-right: 1em;
+    }
+  }
+  &__input {
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    &::placeholder {
+      color: $primary-neutral-color;
+      font-size: 0.9em;
+    }
+    &--error {
+      border: solid 2px $secondary-color;
+    }
+    @include breakpoint(large) {
+      padding-top: initial;
+      padding-bottom: initial;
+    }
+  }
+  &__btn {
+    color: #fff;
+    background-color: $secondary-color;
+    &:hover {
+      color: $secondary-color;
+      border-color: $secondary-color;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+  &__error-message {
+    background-color: $secondary-color;
+    color: #fff;
+    display: none;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8em;
+    border-radius: 0 0 4px 4px;
+    margin-top: -4px;
+    padding: 0.3em 1em;
+
+    &--show {
+      display: block;
+    }
+  }
+}

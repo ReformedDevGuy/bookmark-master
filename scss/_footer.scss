@@ -1,0 +1,60 @@
+.footer {
+  background-color: $secondary-neutral-color;
+  &__wrapper {
+    @include breakpoint(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__logo {
+    flex: 1;
+    display: block;
+    padding: 2rem 1rem 1.5rem 1rem;
+    @include breakpoint(large) {
+      padding: initial;
+    }
+    svg {
+      display: block;
+      margin: auto;
+      @include breakpoint(large) {
+        display: initial;
+        margin: initial;
+      }
+    }
+  }
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint(large) {
+      flex: 4;
+      flex-direction: row;
+    }
+    &__item {
+      text-transform: uppercase;
+    }
+    &__link {
+      display: block;
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 1rem 1.5rem;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__link {
+      display: block;
+      padding: 1rem;
+      &:hover {
+        svg path {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+}

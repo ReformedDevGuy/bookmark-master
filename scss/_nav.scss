@@ -1,0 +1,110 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  @include breakpoint(large) {
+    justify-content: space-between;
+  }
+}
+.nav__hamburger-icon {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+.nav__wrapper {
+  background-color: rgba($secondary-neutral-color, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  align-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  transform: translateY(-100%);
+  transition: transform 0.8s ease;
+  &--show {
+    transform: translateY(0);
+  }
+  @include breakpoint(large) {
+    background-color: transparent;
+    position: initial;
+    width: initial;
+    height: initial;
+    flex-wrap: nowrap;
+    padding: 0;
+    transform: initial;
+  }
+}
+.nav__link {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  display: block;
+  width: 100%;
+  align-self: center;
+  color: #fff;
+  margin: 0;
+  padding: 18px;
+  @include breakpoint(large) {
+    padding: 8px 20px;
+    font-size: 14px;
+    color: $secondary-neutral-color;
+    letter-spacing: 1.2px;
+    margin-right: 10px;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+.nav__logo--mobile {
+  width: 33%;
+  align-self: center;
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+.nav__close-icon {
+  background: none;
+  border: 0;
+  width: 20%;
+  margin-left: auto;
+  cursor: pointer;
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+.nav__link--login {
+  border: solid 2px #fff;
+  border-radius: 5px;
+  @include breakpoint(large) {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+    &:hover {
+      background: #fff;
+      color: $secondary-color;
+    }
+  }
+}
+
+.nav__link--social {
+  width: 10%;
+  margin: auto;
+}
+.nav__link--hide {
+  @include breakpoint(large) {
+    display: none;
+  }
+}

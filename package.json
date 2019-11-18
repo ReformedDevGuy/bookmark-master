@@ -1,0 +1,15 @@
+{
+  "name": "bookmark-landing-page",
+  "version": "1.0.0",
+  "description": "Bookmark landing page",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
